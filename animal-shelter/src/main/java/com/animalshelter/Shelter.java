@@ -31,4 +31,23 @@ public class Shelter {
     public List<Animal> getAllAnimals() {
         return animals;
     }
+    public List<Animal> findAnimalsByType(String type) {
+        List<Animal> result = new java.util.ArrayList<>();
+        for (Animal animal : animals) {
+            if (animal.getType().equalsIgnoreCase(type)) {
+                result.add(animal);
+            }
+        }
+        return result;
+    }
+
+    public List<Animal> findAnimalsByAge(int age) {
+        List<Animal> result = new java.util.ArrayList<>();
+        for (Animal animal : animals) {
+            if (animal.getAge() == age) {
+                result.add(animal);
+            }
+        }
+        return result;
+    }
 }
